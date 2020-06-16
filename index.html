@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Covid-19  - Wander Alvarenga</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h1>Covid-19  - Wander Alvarenga</h1>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Meus pacientes</h2>
+				<label for="filtrar-tabela">Filtre:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do paciente">
+
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Endereço</th>
+							<th>Telefone</th>
+							<th>Peso(kg)</th>
+							<th>Altura(m)</th>
+							<th>Problemas de saúde</th>		
+						</tr>
+					</thead>
+					<tbody id="tabela-pacientes">
+						<tr class="paciente" id="primeiro-paciente" >
+							<td class="info-nome">Paulo</td>
+							<td class="info-endereco">Rua Oswaldo Cruz</td>
+							<td class="info-telefone">33232692</td>
+							<td class="info-peso">100</td>
+							<td class="info-altura">1.88</td>
+							<td class="info-saude">Febre</td>
+						</tr>
+
+						<tr class="paciente" >
+							<td class="info-nome">Wander</td>
+							<td class="info-endereco">Rua Dom Pedro</td>
+							<td class="info-telefone">98304318</td>
+							<td class="info-peso">85</td>
+							<td class="info-altura">1.70</td>
+							<td class="info-saude">Gripizinha</td>
+						</tr>
+
+						<tr class="paciente" >
+							<td class="info-nome">Tatiana</td>
+							<td class="info-endereco">Avenida Vitória</td>
+							<td class="info-telefone">40028922</td>
+							<td class="info-peso">65</td>
+							<td class="info-altura">1.53</td>
+							<td class="info-saude">Febre e tosse</td>
+						</tr>
+
+						<tr class="paciente">
+							<td class="info-nome">JoãoPaulo</td>
+							<td class="info-endereco">Rua Pantanal</td>
+							<td class="info-telefone">35698788</td>
+							<td class="info-peso">89</td>
+							<td class="info-altura">1.80</td>
+							<td class="info-saude">dor de cabeça</td>
+						</tr>
+						<tr class="paciente" >
+							<td class="info-nome">Lilian</td>
+							<td class="info-endereco">Rodosol</td>
+							<td class="info-telefone">36556998</td>
+							<td class="info-peso">75</td>
+							<td class="info-altura">1.65</td>
+							<td class="info-saude">Febre</td>
+						</tr>
+					</tbody>
+				</table>
+				 <span id="erro-ajax" class="invisivel"> Erro ao buscar os pacientes</span>
+				 <span id="buscar-paciente" class="botao bto-principal">Para Remover o Paciente, basta clicar duas vezes em cima do próprio paciente!</span>
+
+
+			</section>
+		</main>
+
+	<section class="container">
+    <h2 id="titulo-form">Adicionar novo paciente</h2>
+    <ul id="mensagens-erro">
+    	<li></li>
+    </ul>
+    <form id="form-adiciona">
+        <div class="grupo">
+            <label for="nome">Nome:</label>
+            <input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
+        </div>
+        <div class="grupo">
+            <label for="endereco">Endereço:</label>
+            <input id="endereco" name="endereco" type="text" placeholder="digite o endereço do seu paciente" class="campo campo-medio">
+		</div>
+		<div class="grupo">
+            <label for="telefone">Telefone:</label>
+            <input id="telefone" name="telefone" type="text" placeholder="digite o telefone do seu paciente" class="campo campo-medio">
+		</div>	
+        <div class="grupo">
+            <label for="altura">Altura:</label>
+            <input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
+		</div>
+		<div class="grupo">
+            <label for="peso">Peso:</label>
+            <input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
+        </div>
+        <div class="grupo">
+            <label for="saude">Problemas de Saúde:</label>
+            <input id="saude" name="gordura" type="text" placeholder="digite o problema de saúde do seu paciente" class="campo campo-medio">
+        </div>
+
+        <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+    </form>
+</section>
+
+	</body>
+	<script src="js/form.js"></script>
+	<script src="js/remover-paciente.js"></script>
+	<script src="js/filtra.js"></script>
+	
+</html> 
